@@ -1,0 +1,197 @@
+/* Importing a clean, modern font from Google Fonts url here
+ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+ 
+/* urjest space for all page  */
+* {
+    margin: 0;
+ padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --- 1. Container Settings
+Exactly 100vh as requested
+--- */
+.container {
+    display: flex;
+ height: 100vh;
+
+    width: 100%;
+}
+
+/* --- 2. Left Section
+Takes up 50% of the screen
+vibrant light green from the mockup
+and item is center 
+--- */
+.left-section {
+    flex: 1;
+   
+ background-color: #28e437;
+
+    display: flex;
+justify-content: center;
+    align-items: center;
+}
+  /* Optional floating animation to make it look good 
+ auto height becouse automatic manage our self 
+   */
+.illustration {
+    max-width: 60%;
+    height: auto;
+  
+}
+
+/* --- 3. Form Section 
+Takes up the other 50%
+--- */
+.right-section {
+    flex: 1;
+   
+ display: flex;
+    justify-content: center;
+    align-items: center;
+ background-color: #ffffff;
+    padding: 2rem;
+}  /* Spacing between header and form */
+.form-container {
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  
+}
+/* --- 4. Form Heading and Description
+ --- */
+.form-header {
+    text-align: center;
+}
+/* <-- manage font size and color here --> */
+.form-header h1 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+.form-header p {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+}
+/* --- 5. Email and Password Inputs
+gap between laret 
+--- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.input-group label {
+    font-size: 0.85rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.input-group input {
+    padding: 1rem;
+ border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    
+outline: none;
+    transition: border-color 0.3s ease;
+    background-color: #fcfcfc;
+}
+
+.input-group input:focus {
+    border-color: #eab906;
+    background-color: #ffffff;
+}
+
+.input-group input::placeholder {
+    color: #b3b3b3;
+}
+
+/* Forgot Password Link  
+Pulls it slightly closer to the password field
+*/
+.forgot-password {
+    text-align: right;
+    margin-top: -0.5rem;
+    /* */
+}
+
+.forgot-password a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+.forgot-password a:hover {
+    color: #091be5c4;
+}
+/* --- 6. Login Button
+ */
+.login-btn {
+    background-color: #682fee;
+   
+    color: white;
+  padding: 1rem;
+
+    border: none;
+  border-radius: 8px;
+    font-size: 1rem;
+  font-weight: 600;
+    cursor: pointer;
+
+    margin-top: 0.5rem;
+}
+/* use hover becose move courser to change color of btn 
+ */
+.login-btn:hover {
+    background-color: #29f147;
+}
+
+.login-btn:active {
+    transform: scale(0.98);
+}
+
+/* Register Link Styling 
+becouse left side pic 
+and text-laing center 
+*/
+.register-link {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 1rem;
+}
+/* here to register and use font weight 
+no use font decroatino 
+*/
+.register-link a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+}
+.register-link a:hover {
+    text-decoration: underline;
+}
+/* --- Responsive Design (Mobile Support) 
+  /* Hides the illustration on smaller screens to prioritize the form */
+ --- */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+ .left-section {
+        display: none;
+      
+    }
+}
